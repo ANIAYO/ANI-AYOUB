@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090e1b"><title>ANIAYO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="brand-mark">A</span><span>ANIAYO</span></div><button class="icon" aria-label="بحث" onclick="focusSearch()">⌕</button></header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">عالمك • أنميك • قصتك</span><h1>عِش المغامرة<br><em>حلقةً بعد حلقة</em></h1>
+  <p>تابع أعمالك المفضلة واكتشف عوالم جديدة.</p>
+  <button class="primary" onclick="openAnime()">اكتشف ون بيس <span>←</span></button></div>
+  <div class="hero-art"><div class="sun"></div><div class="ship">☠</div><div class="wave"></div><div class="hero-tag">ONE PIECE</div></div>
+</section>
+<section class="section">
+ <div class="section-head"><div><small>اختيارات ANIAYO</small><h2>تابع من حيث توقفت</h2></div><span class="muted">عرض الكل</span></div>
+ <div class="continue-card" onclick="openAnime()"><div class="poster mini"><b>ONE<br>PIECE</b><span>麦わら</span></div><div class="continue-info"><b>ون بيس</b><small>الحلقة التجريبية • بيانات توضيحية</small><div class="progress"><i></i></div><small>تجربة الواجهة — لا يوجد فيديو مرفق</small></div><span class="play">▶</span></div>
+</section>
+<section class="section" id="anime">
+ <div class="section-head"><div><small>ابدأ رحلتك</small><h2>الأنمي المميز</h2></div><span class="pill">الأكثر طلباً</span></div>
+ <div class="feature-card" onclick="openAnime()"><div class="feature-poster"><div class="poster-title">ONE<br>PIECE</div><span class="strawhat">☠</span><span class="poster-caption">رحلة البحث عن الكنز العظيم</span></div><div class="feature-details"><div><h3>ون بيس</h3><p>مغامرة • أكشن • كوميديا</p></div><span class="rating">★ 9.5</span></div><p class="desc">انطلق مع لوفي وطاقم قبعة القش في مغامرة عبر البحار.</p><button class="outline" onclick="event.stopPropagation();openAnime()">التفاصيل والحلقات</button></div>
+</section>
+<section class="section">
+ <div class="section-head"><div><small>اعثر على ما تحب</small><h2>تصفح المكتبة</h2></div></div>
+ <input id="search" class="search" placeholder="ابحث عن أنمي..." oninput="searchAnime(this.value)">
+ <div class="chips"><button class="chip active">الكل</button><button class="chip">مغامرة</button><button class="chip">كوميديا</button><button class="chip">أكشن</button></div>
+ <div id="search-result" class="result hidden">ون بيس — متاح في صفحة التفاصيل التجريبية</div>
+</section>
+</main>
+<nav class="bottom"><button class="navitem active" onclick="scrollTo(0,0)">⌂<small>الرئيسية</small></button><button class="navitem" onclick="focusSearch()">⌕<small>بحث</small></button><button class="navitem" onclick="showNotice('قائمة المفضلة التجريبية')">♡<small>مكتبتي</small></button><button class="navitem" onclick="showNotice('الإعدادات ستضاف في التحديث القادم')">⚙<small>الإعدادات</small></button></nav>
+<div id="modal" class="modal hidden"><div class="sheet"><button class="close" onclick="closeModal()">×</button><div class="sheet-head"><div class="poster mini"><b>ONE<br>PIECE</b></div><div><small class="eyebrow">صفحة الأنمي</small><h2>ون بيس</h2><p>مغامرة • حلقات مرتبة</p></div></div>
+<p class="notice">هذه نسخة أولية لتجربة التصميم. لا تحتوي على حلقات أو روابط بث. أضف فقط فيديوهات تملك حق عرضها.</p>
+<h3>لغة المشاهدة</h3><div class="switches"><button id="sub" class="switch active" onclick="setMode('sub')">ترجمة عربية</button><button id="dub" class="switch" onclick="setMode('dub')">دبلجة عربية</button></div>
+<div class="episode-head"><b>الحلقات</b><small>قائمة تجريبية</small></div><div class="episode" onclick="showNotice('لا يوجد فيديو مرتبط بهذه الحلقة بعد')"><span class="epnum">01</span><div><b>بداية المغامرة</b><small>حلقة تجريبية — أضف مصدراً مرخصاً</small></div><span>▶</span></div>
+<div class="episode" onclick="showNotice('لا يوجد فيديو مرتبط بهذه الحلقة بعد')"><span class="epnum">02</span><div><b>انطلاق الرحلة</b><small>حلقة تجريبية — أضف مصدراً مرخصاً</small></div><span>▶</span></div>
+<button class="primary full" onclick="showNotice('سيعمل المشغل عند ربط مصدر فيديو مرخص')">تشغيل الحلقة</button>
+</div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body></html>

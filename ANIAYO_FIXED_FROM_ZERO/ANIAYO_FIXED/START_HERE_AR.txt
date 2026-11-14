@@ -1,0 +1,18 @@
+ANIAYO — البدء من الصفر (نسخة مصححة)
+=====================================
+
+1) فك ضغط هذا الملف على الكمبيوتر.
+2) افتح مستودع GitHub الحالي: https://github.com/ANIAYO/ANIAYO
+3) من تبويب Code اختر Add file ثم Upload files.
+4) ارفع محتويات مجلد ANIAYO_FIXED (لا ترفع المجلد الخارجي نفسه ولا ملف ZIP).
+5) إذا سأل GitHub عن استبدال ملفات موجودة، وافق على الاستبدال. يجب أن يستبدل الملف:
+   .github/workflows/android.yml
+6) اضغط Commit changes.
+7) افتح Actions ثم Build ANIAYO APK ثم Run workflow.
+8) بعد نجاح البناء، افتح العملية وابحث عن Artifacts ثم نزّل ANIAYO-APK.
+9) فك ضغط Artifact لتحصل على ANIAYO.apk.
+
+مهم:
+- تأكد أن بنية المستودع تبدأ مباشرة بملفات app و .github و build.gradle و settings.gradle.
+- لا تترك نسخة قديمة ثانية من workflow في .github/workflows.
+- هذا البناء ينتج APK تجريبياً. واجهة الترجمة والدبلجة موجودة، لكن لا توجد حلقات ون بيس أو مصادر بث مرفقة.
